@@ -267,13 +267,50 @@ span.psw {
     }
 
 }
+/*   NNENENWNENWENWENnewnns  */
 .news{
 	margin: 10px;
-	height: 200px;
+	height: 25vw;	
+	
+	margin-bottom: 30px;
+	width: 96%;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+}
+.news-head{
+	width: 110%;
+	margin-left: -10%;
+	position: relative;
+	height: 40%;
+}
+.news-img{
+	height:80%;
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+
+}
+.news-title{
+	font-size: 1.9vw;
+	background: #393C42;
+	color: white;
+	padding-left: 4%;
+	padding-right: 3%;
+	padding-bottom: 1%;
+	padding-top: 1%;
+	position: absolute;
+	width: 85%;
+	top: 40%;
+
+}
+.info{
+	font-family: Lobster, serif;
+	font-size: 1.5vw;
 }
 .readmore{
-	width: 100%;
-	height: 12%;
+	width: 98%;
+	height: 2vw;
 	background-color: gray;
 	text-align: right;
 	padding-right: 2%;
@@ -282,29 +319,7 @@ span.psw {
 	border-radius: 5px;
 	font-size: 1.5vw;
 	color: white;
-	position: relative;
-}
-.news-title{
-	font-size: 1.9vw;
-	background: #393C42;
-	color: white;
-	padding-left: 4%;
-	padding-right: 4%;
-	padding-bottom: 1%;
-	padding-top: 1%;
 	position: absolute;
-	width: 85%;
-	top: 40%;
-
-}
-.news-img{
-	height: 47%;
-	width: 100%;
-	overflow: hidden;
-	position: relative;
-}
-.news-head{
-	width: 110%;
-	margin-left: -10%;
-	position: relative;
+	margin-top: 20px;
+	bottom:0;
 }
