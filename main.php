@@ -18,7 +18,7 @@
             	<div class="news">
             		<div class="news-head">
               			<div class="news-img">
-                			<img src="img/header.jpg" alt="" class="news-title-img" /> 
+                			<img src="img/header.jpg" alt=""> 
               			</div>
               			<div class="news-title">
                 			Lorem ipsum dolor sit amet.    
