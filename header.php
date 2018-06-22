@@ -1,3 +1,16 @@
+<?php
+require 'rb.php';	
+R::setup( 'mysql:host=127.0.0.1;dbname=u2d','root', '' ); 
+ 
+if ( !R::testConnection() )
+{
+        exit ('Нет соединения с базой данных');
+}
+
+?>
+
+<!DOCTYPE html>
+<html lang="ru">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -64,6 +77,6 @@
 				</div>
 			</div>
 		</header>
-		
-		
-				
+</html>			
+	
+
