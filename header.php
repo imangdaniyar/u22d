@@ -39,7 +39,7 @@ if ( !R::testConnection() )
       <label for="psw"><b>Password</b></label>
       <input type="password" placeholder="Enter Password" name="psw" required> 
       <button type="submit">Login</button>
-      <span style="float:right;">Нет аккаунта?, <a href="#" style="color:blue">зарегистрируйтесь</a></span>
+      <span style="float:right;">Нет аккаунта?, <a href="registration.php" style="color:blue">зарегистрируйтесь</a></span>
     </div>
     <div class="container"></div>
   
@@ -53,7 +53,7 @@ if ( !R::testConnection() )
 		<header class="header">
 			<div class="logo">
 				<img src="img/gray-bg.jpg" style="width: 100%; height: 100%;" />
-				<a href="#"><span class="logo-name">URALSK<br>TODAY</span></a>
+				<a href="main.php"><span class="logo-name">URALSK<br>TODAY</span></a>
 			</div>
 			<div class="heads"><span id="main-note">Уральский новостной портал</span></div>
 			<div class="heads">
@@ -78,6 +78,7 @@ if ( !R::testConnection() )
 				</div>
 			</div>
 		</header>
+
 </html>			
 	
 

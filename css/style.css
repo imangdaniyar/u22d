@@ -34,7 +34,7 @@ a.nav-link{
 
 }
 .logo{
-	float: left;
+	
 	width: 30%;
 	height: 11.5vw;
 	position: absolute;
@@ -51,7 +51,7 @@ a.nav-link{
 .logo-name{
 	font-size: 3.8vw;
 	position: absolute;
-	top: 3;
+	top:0;
 	color:lightgray;
 	left:20%;
 	font-weight: bold;
@@ -78,16 +78,17 @@ a.nav-link{
 	display: flex;
 	justify-content: space-around;
 	margin:0;
-	padding:0; 	
+	padding:0;
+	width: 100%;
+	height: 100%; 	
 }	
 .nav-item{
-	display: block;
 	height: 100%;
 	width: 18%;
 	text-align: center;
 	position: relative;
 	margin-bottom: 0;
-	
+	display: block;
 }
 .nav-item:hover{
 	background-color: lightgray;
@@ -126,10 +127,11 @@ a.nav-link{
 .content{
 	background-color: white;
 	box-shadow: 1vw 1vw 1vw rgba(0,0,0,0.6);
-	
+	position: relative;
 	min-height:300px; 
 	height: auto;
 	z-index: 2;
+	width: 100%;
 }
 .additional{
 	background: #393C42;
@@ -143,13 +145,14 @@ a.nav-link{
 /*    Authorizhation fdsafidsfsadbfosad   */
 
 /* Full-width input fields */
-input[type=text], input[type=password] {
+.modal input[type=text], input[type=password] {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
+    
 }
 
 /* Set a style for all buttons */
@@ -269,7 +272,7 @@ span.psw {
 		transform: translateY(-5px);
 		transition: 1s;
     }
-
+ 
 
 }
 /*   NNENENWNENWENWENnewnns  */
@@ -352,8 +355,10 @@ span.psw {
 	font-family: 'EB Garamond', serif;
 }
 .readmore:hover{
-	padding: 2%;
+	opacity: 0.5;
+
 }
+
 .icon{
 	
 	margin-right: 1vw;
@@ -364,3 +369,56 @@ span.psw {
 	text-align: center;
 	margin-top: 1vw;
 }
+
+/*   REGISTRATION  */
+.contitle{
+	width: 30%;
+	margin: 0 auto;
+	height: 3vw;
+	border:1px solid silver;
+	padding:1vw;
+
+}
+.contitle-name{
+	font-size: 3vw;
+	font-family: Lobster;
+}
+.reg-form{
+	width: 70%;
+	height: 500px;
+	border: 1px solid silver;
+	margin:0 auto;
+	padding: 2vw;
+	position: relative;
+}
+.form{
+	width: 100%;
+	height: 100%;
+}
+.input-field{
+	width: 90%;
+	height: 2vw;
+	position: relative;
+	margin-top: 3.5vw;
+}
+.form-label{
+	position: absolute;
+	top:0.8vw;
+	left: 2vw;
+	font-size: 1.3vw;
+	font-family: Lobster;
+	
+}
+.input-field input[type=text], input[type=password]{
+	box-sizing: border-box;
+	height: 3vw;
+	width: 100%;
+
+	&:focus ~ .hint-label {
+       color:green;
+      }
+}
+input[type=text]:focus + .hint-label{
+	color:green;
+}
+
