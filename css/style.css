@@ -411,19 +411,21 @@ span.psw {
 	font-size: 1.3vw;
 	font-family: Lobster;
 	padding-top: 0.7vw;	
-	color:gray;
+	color:lightgray;
 	transition: 1s;
 	pointer-events: none;
+	padding-left: 0.3vw;
 }
 .input-field input[type=text], input[type=password]{
 	box-sizing: border-box;
 	height: 3vw;
 	width: 100%;
 	border:none;
-	border-bottom: 2px solid silver;
+	border-bottom: 2px solid #05F59B;
 	padding: 1vw 0;
 	font-size: 1.3vw;
 	outline: none;
+	color:#00C67C;
 	
 }
 input[type=text]:focus + .hint-label{
@@ -432,7 +434,7 @@ input[type=text]:focus + .hint-label{
 .input-field input:valid ~ label,
 .input-field input:focus ~ label{
 	top:-2.5vw;
-	color: #00C67C;
+	color: #05F59B;
 	font-size: 1vw;
 }
 .reg-inp{
