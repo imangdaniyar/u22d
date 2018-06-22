@@ -2,9 +2,11 @@
 	include 'header.php';
 ?>
 		<div class="grid-container">
-  			<div class="content">
-  				<div class="contitle"><span class="contitle-name">Регистрация</span></div>
-          <div class="reg-form">
+  			<div class="content" style="background-color: rgb(4,197,130);
+        box-shadow: 1vw 1vw 2vw rgb(4,197,130,0.4)!important;">
+  				
+            <div class="reg-form">
+            <div class="contitle"><span class="contitle-name">Регистрация</span></div>
             <form action="registration.php" method="POST" class="form">
               <div class="input-field">
                 <input type="text" name="name" class="reg-inp" required>
@@ -18,9 +20,13 @@
                 <input type="text" name="username" class="reg-inp" required>
                 <label class="form-label">Придумайте имя пользователя</label>
               </div>
-              
+              <div class="submit-form">
+                  <button class="submit">Зарегистрироваться</button>
+                </div>
             </form>
           </div>
+          
+          
         </div>
   					
   			<div class="additional">
