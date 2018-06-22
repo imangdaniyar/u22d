@@ -19,6 +19,7 @@ if ( !R::testConnection() )
 	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Cormorant+Unicase" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=EB+Garamond" rel="stylesheet">
 	<script src="js/script.js"></script>
 
 </head>
