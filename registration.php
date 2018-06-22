@@ -7,18 +7,16 @@
           <div class="reg-form">
             <form action="registration.php" method="POST" class="form">
               <div class="input-field">
-                <input type="text" name="name" class="reg-inp"/>
-                <label for="name" class="form-label">
-                  <span class="hint-label">Имя</span>
-                </label>
+                <input type="text" name="name" class="reg-inp" required>
+                <label class="form-label">Введите ваше имя</label>
               </div>
               <div class="input-field">
-                <label for="name" class="form-label">Имя</label>
-                <input type="text" name="name" class="reg-inp"/>
+                <input type="text" name="sname" class="reg-inp" required>
+                <label class="form-label">Введите ваше фамилию</label>
               </div>
               <div class="input-field">
-                <label for="name" class="form-label">Имя</label>
-                <input type="text" name="name" class="reg-inp"/>
+                <input type="text" name="username" class="reg-inp" required>
+                <label class="form-label">Придумайте имя пользователя</label>
               </div>
               
             </form>
