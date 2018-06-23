@@ -426,6 +426,7 @@ span.psw {
 	font-size: 1.3vw;
 	outline: none;
 	color:#00C67C;
+	font-family: Lobster;
 	
 }
 input[type=text]:focus + .hint-label{
