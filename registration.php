@@ -7,23 +7,69 @@
   				
             <div class="reg-form">
             <div class="contitle"><span class="contitle-name">Регистрация</span></div>
-            <form action="registration.php" method="POST" class="form">
-              <div class="input-field">
-                <input type="text" name="name" class="reg-inp" required>
-                <label class="form-label">Введите ваше имя</label>
-              </div>
-              <div class="input-field">
-                <input type="text" name="sname" class="reg-inp" required>
-                <label class="form-label">Введите ваше фамилию</label>
-              </div>
-              <div class="input-field">
-                <input type="text" name="username" class="reg-inp" required>
-                <label class="form-label">Придумайте имя пользователя</label>
-              </div>
-              <div class="submit-form">
-                  <button class="submit">Зарегистрироваться</button>
-                </div>
-            </form>
+              <form action="registration.php" method="POST" class="form">
+                <table>
+                  <tr>
+                    <td>
+                      <div class="input-field">
+                        <input type="text" name="name" class="reg-inp" required >
+                        <label class="form-label">Введите ваше имя
+                        </label>
+                      </div>
+                    </td>
+                    
+                    <td>
+                      <span class="error_form" id="name_error_message"></span>
+                    </td>
+                  </tr>
+                  
+                  <tr>
+                    <td>
+                      <div class="input-field">
+                        <input type="text" name="sname" class="reg-inp" required>
+                        <label class="form-label">Введите ваше фамилию</label>
+                      </div>
+                    </td>
+                    
+                    <td>
+                      <span class="error_form" id="sname_error_message"></span>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <div class="input-field">
+                        <input type="text" name="login" class="reg-inp" required>
+                        <label class="form-label">Придумайте имя пользователя</label>
+                      </div>
+                    </td>
+                    
+                    <td>
+                      <span class="error_form" id="login_error_message"></span>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <div class="input-field">
+                        <input type="password" name="psw" required class="reg-inp"> 
+                        <label for="psw" class="form-label">Password</label>
+                      </div>
+                    </td>
+                    
+                    <td>
+                      <span class="error_form" id="psw_error_message"></span>
+                    </td>
+
+                    <td>
+                      <div class="submit-form">
+                        <button class="submit">Зарегистрироваться</button>
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+                
+              </form>
           </div>
           
           

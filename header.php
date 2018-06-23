@@ -27,18 +27,18 @@ if ( !R::testConnection() )
 	<div id="id01" class="modal">
   
   <form class="modal-content animate" action="/action_page.php">
-    <div class="imgcontainer">
+    
+
+    <div class="container">
+    	<div class="imgcontainer">
       <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
       <img src="img/ava.png" alt="Avatar" class="avatar">
     </div>
-
-    <div class="container">
       <label for="uname"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
-
+      <input type="text" placeholder="Enter Username" name="username" required  class="reg-inp">
       <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required> 
-      <button type="submit">Login</button>
+      <input type="password" placeholder="Enter Password" name="psw" required class="reg-inp"> 
+      <button type="submit" class="submit">Login</button>
       <span style="float:right;">Нет аккаунта?, <a href="registration.php" style="color:blue">зарегистрируйтесь</a></span>
     </div>
     <div class="container"></div>

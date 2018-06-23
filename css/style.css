@@ -190,6 +190,15 @@ img.avatar {
 
 .container {
     padding: 10px;
+    width: 70%;
+	height: 100%;
+	margin:2vw auto;
+	padding: 2vw;
+	position: relative;
+	background-color: #393C42;;
+	border-radius: 5vw;
+	box-shadow: 0 0 2vw rgb(0,0,6);
+	text-align: center;
 }
 
 span.psw {
@@ -426,8 +435,7 @@ span.psw {
 	font-size: 1.3vw;
 	outline: none;
 	color:#00C67C;
-	font-family: Lobster;
-	
+	margin: 0;
 }
 input[type=text]:focus + .hint-label{
 	color:green;
