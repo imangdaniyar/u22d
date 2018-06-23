@@ -458,3 +458,16 @@ input[type=text]:focus,input[type=password]:focus + .hint-label{
 	height: 3.5vw;
 	padding: 0 2vw; 
 }
+
+
+
+
+/*      <------profile------->     */
+
+.profile-container{
+	width: 90%;
+	height: 100%;
+	padding:2vw;
+	border: 1px solid silver;
+}
+

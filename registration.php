@@ -52,7 +52,7 @@
                   <tr>
                     <td>
                       <div class="input-field">
-                        <input type="password" name="psw" required class="reg-inp"> 
+                        <input type="password" name="password" required class="reg-inp"> 
                         <label for="psw" class="form-label" style="font-size: 1vw;">Придумайте сложный пароль</label>
                       </div>
                     </td>
