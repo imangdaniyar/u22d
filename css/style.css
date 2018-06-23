@@ -473,7 +473,8 @@ input[type=text]:focus,input[type=password]:focus + .hint-label{
 	border: 1px solid silver;
 }
 
-=======
+
+/*      <------profile------->     */
 .error_form{
 	position: relative;
 	height: 3.5vw; 
@@ -482,7 +483,13 @@ input[type=text]:focus,input[type=password]:focus + .hint-label{
 	text-align: right;
 
 }
-.tooltip {
+.tooltip_right {
+	text-align: right;
+	position: relative;
+	float: right;
+	width: auto;
+}
+.tooltip_wrong {
 	text-align: right;
 	position: relative;
 	float: right;
@@ -505,7 +512,7 @@ input[type=text]:focus,input[type=password]:focus + .hint-label{
     transition: opacity 0.3s;
 }
 
-.tooltip .tooltiptext::after {
+.tooltip_wrong .tooltiptext::after {
     content: "";
     position: absolute;
     top: 100%;
@@ -516,12 +523,14 @@ input[type=text]:focus,input[type=password]:focus + .hint-label{
     border-color: #555 transparent transparent transparent;
 }
 
-.tooltip:hover .tooltiptext {
+.tooltip_wrong:hover .tooltiptext {
     visibility: visible;
     opacity: 1;
     
 }
-.fa .fa-times{
-	position: absolute;
+.fa{
+	margin-top:0.4vw;
 }
+
+
 >>>>>>> fd44008821fcfa2439a0e354260934e51827cde3

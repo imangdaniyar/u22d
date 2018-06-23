@@ -13,48 +13,65 @@
                         <input type="text" name="name" class="reg-inp" required id="form_name">
                         <label class="form-label">Введите ваше имя
                         </label>
-                        <div class="tooltip" id="tooltip_wrong">
-                        <i style="color:red" class="fa fa-times" aria-hidden="true"></i>
-                        <span class="error_form, tooltiptext" id="name_error_message"></span>
-                      </div>
+                        <div  class="tooltip_wrong">
+                            <i style="color:red; font-size:2vw;" class="fa fa-times" aria-hidden="true"></i>
+                            <span class="error_form, tooltiptext" id="name_error_message"></span>
+                        </div>
+                        <div  class="tooltip_right">
+                            <i style="color:lightgreen;font-size:2vw;" class="fa fa-check" aria-hidden="true" ></i>
+                        </div>
                     </div>
 
-                      <div class="tooltip" id="tooltip_right">
-                        <i style="color:lightgreen" class="fa fa-check" aria-hidden="true" ></i>
-                      </div>
-    
                       <div class="input-field">
                         <input type="text" name="sname" class="reg-inp" required id="form_sname">
                         <label class="form-label">Введите вашу фамилию</label>
-                      </div>
-                    
-                      <span class="error_form" id="sname_error_message"></span>
-
-                      <div class="input-field">
+                         <div  class="tooltip_wrong">
+                            <i style="color:red; font-size:2vw;" class="fa fa-times" aria-hidden="true"></i>
+                            <span class="error_form, tooltiptext" id="sname_error_message"></span>
+                        </div>
+                        <div  class="tooltip_right">
+                            <i style="color:lightgreen;font-size:2vw;" class="fa fa-check" aria-hidden="true" ></i>
+                        </div>
+                      </div>       
+                      <div  class="input-field">
                         <input type="text" name="login" class="reg-inp" required id="form_login">
                         <label class="form-label" >Придумайте имя пользователя</label>
+                        <div  class="tooltip_wrong">
+                            <i style="color:red; font-size:2vw;" class="fa fa-times" aria-hidden="true"></i>
+                            <span class="error_form, tooltiptext" id="login_error_message"></span>
+                        </div>
+                        <div  class="tooltip_right">
+                            <i style="color:lightgreen;font-size:2vw;" class="fa fa-check" aria-hidden="true" ></i>
+                        </div>
                       </div>
-                    
-                      <span class="error_form" id="login_error_message"></span>
-                    
+          
                       <div class="input-field">
-<<<<<<< HEAD
-                        <input type="password" name="password" required class="reg-inp"> 
-                        <label for="psw" class="form-label" style="font-size: 1vw;">Придумайте сложный пароль</label>
-=======
                         <input type="password" name="password" required class="reg-inp" id="form_password"> 
                         <label for="password" class="form-label" >Придумайте сложный пароль</label>
->>>>>>> fd44008821fcfa2439a0e354260934e51827cde3
+                        <div  class="tooltip_wrong">
+                            <i style="color:red; font-size:2vw;" class="fa fa-times" aria-hidden="true"></i>
+                            <span class="error_form, tooltiptext" id="password_error_message"></span>
+                        </div>
+                        <div  class="tooltip_right">
+                            <i style="color:lightgreen;font-size:2vw;" class="fa fa-check" aria-hidden="true" ></i>
+                        </div>
+
                       </div>
                     
-                      <span class="error_form" id="password_error_message"></span>
-
+              
                       <div class="input-field">
                         <input type="password" name="repass" required class="reg-inp" id="form_repass"> 
                         <label for="psw" class="form-label" >Повторите пароль</label>
+                        <div  class="tooltip_wrong">
+                            <i style="color:red; font-size:2vw;" class="fa fa-times" aria-hidden="true"></i>
+                            <span class="error_form, tooltiptext" id="repass_error_message"></span>
+                        </div>
+                        <div  class="tooltip_right">
+                            <i style="color:lightgreen;font-size:2vw;" class="fa fa-check" aria-hidden="true" ></i>
+                        </div>
                       </div>
 
-                      <span class="error_form" id="repass_error_message"></span>
+                      
                     
                       <div class="submit-form">
                         <button class="submit">Зарегистрироваться</button>
