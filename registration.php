@@ -3,7 +3,7 @@
 ?>
 		<div class="grid-container">
   			<div class="content" style="background-color: rgb(4,197,130);
-        box-shadow: 1vw 1vw 2vw rgb(4,197,130,0.4)!important;">
+        box-shadow: 1vw 1vw 2vw rgb(4,195,130,0.3)!important;">
   				
             <div class="reg-form">
             <div class="contitle"><span class="contitle-name">Регистрация</span></div>
@@ -27,7 +27,7 @@
                     <td>
                       <div class="input-field">
                         <input type="text" name="sname" class="reg-inp" required>
-                        <label class="form-label">Введите ваше фамилию</label>
+                        <label class="form-label">Введите вашу фамилию</label>
                       </div>
                     </td>
                     
@@ -40,7 +40,7 @@
                     <td>
                       <div class="input-field">
                         <input type="text" name="login" class="reg-inp" required>
-                        <label class="form-label">Придумайте имя пользователя</label>
+                        <label class="form-label" style="font-size: 1vw;">Придумайте имя пользователя</label>
                       </div>
                     </td>
                     
@@ -53,7 +53,7 @@
                     <td>
                       <div class="input-field">
                         <input type="password" name="psw" required class="reg-inp"> 
-                        <label for="psw" class="form-label">Password</label>
+                        <label for="psw" class="form-label" style="font-size: 1vw;">Придумайте сложный пароль</label>
                       </div>
                     </td>
                     
