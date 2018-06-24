@@ -386,7 +386,7 @@ span.psw {
 }
 .reg-form{
 	width: 70%;
-	height: 500px;
+	height: 700px;
 	margin:2vw auto;
 	padding: 2vw;
 	position: relative;
@@ -417,7 +417,7 @@ span.psw {
 	pointer-events: none;
 	padding-left: 0.3vw;
 }
-.input-field input[type=text], input[type=password]{
+.input-field input[type=text], input[type=password], .select-inp{
 	box-sizing: border-box;
 	height: 3vw;
 	width: 94%;
@@ -431,7 +431,7 @@ span.psw {
 	float: left;
 }
 input[type=text]:focus,input[type=password]:focus + .hint-label{
-	color:green;
+	
 }
 .input-field input:valid ~ label,
 .input-field input:focus ~ label{
@@ -439,16 +439,24 @@ input[type=text]:focus,input[type=password]:focus + .hint-label{
 	color: #05F59B;
 	font-size: 1vw;
 }
-.reg-inp{
+.input-field select:valid ~ label,
+.input-field select:focus ~ label{
+	top:-2.5vw;
+	color: #05F59B;
+	font-size: 1vw;
+}
+.reg-inp, .select-inp{
 	background-color: #545D6A;
 	border-radius: 0.7vw;
 }
+
 .submit-form{
 	position: relative;
 	width: 100%;
 	height: 2vw;
+
 }
-.submit {
+.buton {
 	position: relative;
 	background-color: #00C67C;
 	margin-top: 4vw;
@@ -534,3 +542,5 @@ input[type=text]:focus,input[type=password]:focus + .hint-label{
 
 
 >>>>>>> fd44008821fcfa2439a0e354260934e51827cde3
+
+

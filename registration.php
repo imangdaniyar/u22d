@@ -8,7 +8,7 @@
   				
             <div class="reg-form">
             <div class="contitle"><span class="contitle-name">Регистрация</span></div>
-              <form action="registration.php" method="POST" class="form">               
+              <form action="registration.php" method="POST" class="form" >               
                       <div class="input-field">
                         <input type="text" name="name" class="reg-inp" required id="form_name">
                         <label class="form-label">Введите ваше имя
@@ -70,16 +70,33 @@
                             <i style="color:lightgreen;font-size:2vw;" class="fa fa-check" aria-hidden="true" ></i>
                         </div>
                       </div>
+                      <div class="input-field">
+                        <select class="select-inp" style="font-size: 1vw; height: 3.4vw;" id="gender" required="true">
+                          <option disabled selected value=""></option>
+                          <option value="M">Мужской</option>
+                          <option value="F">Женский</option>
+                        </select>
+                        <label class="form-label">Выберете пол</label>
+                        <div  class="tooltip_wrong">
+                            <i style="color:red; font-size:2vw;" class="fa fa-times" aria-hidden="true"></i>
+                            <span class="error_form, tooltiptext" id="gender_error_message"></span>
+                        </div>
+                        <div  class="tooltip_right">
+                            <i style="color:lightgreen;font-size:2vw;" class="fa fa-check" aria-hidden="true" ></i>
+                        </div>
+                      </div>
+                        
 
                       
                     
                       <div class="submit-form">
-                        <button class="submit">Зарегистрироваться</button>
+                        <button type="" class="buton"  id="buton" onclick="button_sender();">Зарегистрироваться</button>
+                          </div>
                       </div>
                     
                 
               </form>
-          </div>
+
           
           
         </div>
@@ -96,3 +113,5 @@
 </body>
 
 </html>
+
+

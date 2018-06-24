@@ -1,9 +1,11 @@
 $('document').ready(function(){
 
+
 	$("#name_error_message").hide();
 	$("#sname_error_message").hide();
 	$("#login_error_message").hide();
 	$("#password_error_message").hide();
+	$("#gender_error_message").hide();
 	$('.tooltip_wrong').hide();
 	$('.tooltip_right').hide();
 
@@ -12,6 +14,7 @@ $('document').ready(function(){
 	var error_login = false;
 	var error_password = false;
 	var error_repass = false;
+	var error_gendr = false;
 
 	$("#form_name").focusout(function() {
 		check_name();
@@ -28,6 +31,12 @@ $('document').ready(function(){
 	$("#form_repass").focusout(function() {
 		check_repass();
 	});
+	$("#gender").focusout(function() {
+		check_gender();
+	});
+
+
+	
 	function check_name() {
 		var name_length = $("#form_name").val().length;
 
@@ -41,13 +50,14 @@ $('document').ready(function(){
 			$("#form_name").siblings('.tooltip_wrong').hide();
 			$("#name_error_message").hide();
 			$("#form_name").siblings('.tooltip_right').show();
+			error_name = false;
 		}
 	}
 
 	function check_sname() {
 		var sname_length = $("#form_sname").val().length;
 
-		if (sname_length < 2 || name_length > 20) {
+		if (sname_length < 2 || sname_length > 20) {
 			$("#form_sname").siblings('.tooltip_right').hide();
 			$("#form_sname").siblings('.tooltip_wrong').show();
 			$("#sname_error_message").html("Ваше фамилия должна состоять не менее 2 и не более 20 букв");
@@ -57,6 +67,7 @@ $('document').ready(function(){
 			$("#sname_error_message").hide();
 			$("#form_sname").siblings('.tooltip_right').show();
 			$("#form_sname").siblings('.tooltip_wrong').hide();
+			error_sname = false;
 		}
 	}
 
@@ -70,9 +81,29 @@ $('document').ready(function(){
 			$("#login_error_message").show();
 			error_login = true;
 		} else {
-			$("#login_error_message").hide();
-			$("#form_login").siblings('.tooltip_right').show();
-			$("#form_login").siblings('.tooltip_wrong').hide();
+			var str = $('#form_login').serialize();
+			str = 'logincheck=1&'+str;
+			$.ajax({
+				url: '/checking.php',
+        		type: "POST",
+        		cache: false,
+        		data: str,
+        	success: function(response) {
+            var obj = jQuery.parseJSON(response);
+            if(obj.ans === '0') {
+            	$("#login_error_message").hide();
+				$("#form_login").siblings('.tooltip_right').show();
+				$("#form_login").siblings('.tooltip_wrong').hide()
+            } else if(obj.ans === '1'){
+            	$("#form_login").siblings('.tooltip_right').hide();
+				$("#form_login").siblings('.tooltip_wrong').show();
+				$("#login_error_message").html("Такой логин уже существует");
+				$("#login_error_message").show();
+				error_login = false;
+            }
+        }
+    });
+			;
 		}
 	}
 
@@ -89,6 +120,7 @@ $('document').ready(function(){
 			$("#password_error_message").hide();
 			$("#form_password").siblings('.tooltip_right').show();
 			$("#form_password").siblings('.tooltip_wrong').hide();
+			error_password = false;
 		}
 	}
 
@@ -106,7 +138,25 @@ $('document').ready(function(){
 			$("#repass_error_message").hide();
 			$("#form_repass").siblings('.tooltip_right').show();
 			$("#form_repass").siblings('.tooltip_wrong').hide();
+			error_repass = false;
 		}
 	}
+	function check_gender() {
+		var gender = $("#gender").val();
+		if ( !gender ) {
+			$("#gender").siblings('.tooltip_right').hide();
+			$("#gender").siblings('.tooltip_wrong').show();
+			$("#gender_error_message").html("Вы не выбрали пол");
+			$("#gender_error_message").show();
+			error_gender = true;
+		} else {
+			$("#gender_error_message").hide();
+			$("#gender").siblings('.tooltip_right').show();
+			$("#gender").siblings('.tooltip_wrong').hide();
+			error_gender = false;
+		}
+	}
+	
+
 });
 
