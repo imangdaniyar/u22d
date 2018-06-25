@@ -121,10 +121,11 @@ a.nav-link{
 	grid-template-columns: 70% 30%;
   	grid-gap: 0;
   	z-index: 2;
+  	grid-row: 1/5;
 
 }
 .content{
-	background-color: white;
+	background-image: url(https://www.toptal.com/designers/subtlepatterns/patterns/shl.png);
 	box-shadow: 1vw 1vw 1vw rgba(0,0,0,0.6);
 	position: relative;
 	min-height:300px; 
@@ -196,7 +197,7 @@ img.avatar {
 	border-radius: 5vw;
 	box-shadow: 0 0 2vw rgb(0,0,6);
 	text-align: center;
-	background-image: url(../img/bg.jpg);
+	background: url("https://www.toptal.com/designers/subtlepatterns/patterns/vertical_cloth.png");
 }
 
 span.psw {
@@ -396,7 +397,7 @@ span.psw {
 	margin:2vw auto;
 	padding: 2vw;
 	position: relative;
-	background-color: #393C42;;
+	background-color: rgb(255,255,255,0.1);
 	border-radius: 5vw;
 	box-shadow: 0 0 2vw rgb(0,0,6);
 	text-align: center;

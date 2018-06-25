@@ -2,8 +2,7 @@
 	include 'header.php';
 ?>
 		<div class="grid-container">
-  			<div class="content" style="background-color: rgb(4,197,130);
-        box-shadow: 1vw 1vw 2vw rgb(4,195,130,0.3)!important;">
+  			<div class="content" style="">
   				
             <div class="reg-form">
             <div class="contitle"><span class="contitle-name">Регистрация</span></div>
