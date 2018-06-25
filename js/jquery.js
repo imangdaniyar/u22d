@@ -9,12 +9,12 @@ $('document').ready(function(){
 	$('.tooltip_wrong').hide();
 	$('.tooltip_right').hide();
 
-	var error_name = false;
-	var error_sname = false;
-	var error_login = false;
-	var error_password = false;
-	var error_repass = false;
-	var error_gendr = false;
+	var error_name = true;
+	var error_sname = true;
+	var error_login = true;
+	var error_password = true;
+	var error_repass = true;
+	var error_gender = true;
 
 	$("#form_name").focusout(function() {
 		check_name();
@@ -34,6 +34,14 @@ $('document').ready(function(){
 	$("#gender").focusout(function() {
 		check_gender();
 	});
+	$("#buton").click(function() {
+		register();
+	});
+	
+	$("#signin-button").click(function() {
+		signin();
+	});
+
 
 
 	
@@ -93,13 +101,14 @@ $('document').ready(function(){
             if(obj.ans === '0') {
             	$("#login_error_message").hide();
 				$("#form_login").siblings('.tooltip_right').show();
-				$("#form_login").siblings('.tooltip_wrong').hide()
+				$("#form_login").siblings('.tooltip_wrong').hide();
+				error_login=false;
             } else if(obj.ans === '1'){
             	$("#form_login").siblings('.tooltip_right').hide();
 				$("#form_login").siblings('.tooltip_wrong').show();
 				$("#login_error_message").html("Такой логин уже существует");
 				$("#login_error_message").show();
-				error_login = false;
+				error_login = true;
             }
         }
     });
@@ -156,6 +165,59 @@ $('document').ready(function(){
 			error_gender = false;
 		}
 	}
+
+	function register(){
+		if(!error_gender &  !error_repass & !error_password & !error_login & !error_sname &  !error_name){
+			$('#emsg').css('display','none');
+			var name = $('#form_name').val().trim();
+			var sname = $('#form_sname').val().trim();
+			var login = $('#form_login').val().trim().toLowerCase();
+			var password = $('#form_password').val().trim();
+			var gender = $("#gender").val();
+			var str = 'register=1&'+'name='+name+'&'+'sname='+sname+'&'+'password='+password+'&'+'login='+login+'&'+'gender='+gender;
+			$.ajax({
+				url: '/auth.php',
+        		type: "POST",
+        		cache: false,
+        		data: str,
+        		success: function(response) {
+            		var obj = jQuery.parseJSON(response);
+            		location.replace(obj.ans);	
+        		}
+    		});
+
+	} else {
+		$('#emsg').css('display','block');
+	}
+}
+
+function signin(){
+
+	var login = $('#login').val().trim().toLowerCase();
+	var password = $('#password').val().trim();
+	if(login != '' & password != ''){
+			var str = 'signin=1&'+'login='+login+'&'+'password='+password;
+			$.ajax({
+				url: '/auth.php',
+        		type: "POST",
+        		cache: false,
+        		data: str,
+        		success: function(response) {
+            		var obj = jQuery.parseJSON(response);
+            		if (obj.ans==='0'){
+            			$('#error-messagebox').html('Неправильно введен логин');
+            		}	else if (obj.ans==='1') {
+            			$('#error-messagebox').html('Неправильный пароль');
+            		} else {location.replace(obj.ans);}
+        		}
+    		});
+
+	} else {
+		$('#error-messagebox').html('Заполните поля');
+	}
+}
+
+
 	
 
 });

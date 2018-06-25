@@ -1,4 +1,5 @@
 <?php
+session_start();
 require 'rb.php';	
 R::setup( 'mysql:host=127.0.0.1;dbname=u2d','root', '' ); 
  
@@ -27,9 +28,10 @@ if ( !R::testConnection() )
 
 </head>
 <body>
+	<script src="js/jquery.js"></script>
 	<div id="id01" class="modal">
   
-  <form class="modal-content animate" action="/action_page.php">
+  <form class="modal-content animate" action="/action_page.php" onsubmit="return false">
     
 
     <div class="container">
@@ -38,15 +40,16 @@ if ( !R::testConnection() )
      		 <img src="img/ava.png" alt="Avatar" class="avatar">
     	</div>
     	<div class="input-field">
-    		<input type="text"  name="login" required  class="reg-inp" required>
+    		<input type="text"  name="login" id="login" required  class="reg-inp" required>
       		<label class="form-label"><b>Имя пользователя</b></label>
       	</div>
       	<div class="input-field">
-      		<input type="password"  name="password" required class="reg-inp" required>
+      		<input type="password"  name="password" required class="reg-inp" id="password" required>
      		<label class="form-label"><b>Пароль</b></label>
      	</div>
+     	<div id="error-messagebox"></div>
      	 
-      <button type="submit" class="submit">Login</button>
+      <button type="" class="buton" id="signin-button" style="margin-top:1vw;">Войти</button>
       <span style="float:right;">Нет аккаунта?, <a href="registration.php" style="color:blue">зарегистрируйтесь</a></span>
     </div>
   
@@ -78,9 +81,15 @@ if ( !R::testConnection() )
 						<li class="nav-item">
 							<a href="#" class="nav-link">Контакты</a>
 						</li>
-						<li class="nav-item" onclick="document.getElementById('id01').style.display='block'">
+						<?php if( isset($_SESSION['logged']) ): ?>
+							<li class="nav-item" >
+								<a href="logout.php" class="nav-link">Выйти</a>
+						</li>
+						<?php else : ?>
+							<li class="nav-item" onclick="document.getElementById('id01').style.display='block'">
 								<a href="#" class="nav-link">Войти</a>
 						</li>
+						<?php endif ?> 
 					</ul>
 				</div>
 			</div>

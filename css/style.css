@@ -153,6 +153,12 @@ a.nav-link{
     box-sizing: border-box;
     
 }
+#error-messagebox{
+	color:red;
+	width: 80%;
+	font-size: 1vw;
+	margin-top: 2vw;
+}
 
 /* Set a style for all buttons */
 button {
@@ -187,10 +193,10 @@ img.avatar {
 	margin:2vw auto;
 	padding: 2vw;
 	position: relative;
-	background-color: #393C42;
 	border-radius: 5vw;
 	box-shadow: 0 0 2vw rgb(0,0,6);
 	text-align: center;
+	background-image: url(../img/bg.jpg);
 }
 
 span.psw {
@@ -218,7 +224,7 @@ span.psw {
 .modal-content {
      
     margin: 1% auto 15% auto; /* 1% from the top, 15% from the bottom and centered */
-    background-image: url(../img/bg.jpg);
+    
     width: 25vw;
      /* Could be more or less, depending on screen size */
 }
@@ -459,13 +465,23 @@ input[type=text]:focus,input[type=password]:focus + .hint-label{
 .buton {
 	position: relative;
 	background-color: #00C67C;
-	margin-top: 4vw;
+	margin-top: 3vw;
 	width: auto;
 	border-radius: 0.7vw;
 	font-family: Lobster;
 	font-size: 1.3vw;
 	height: 3.5vw;
 	padding: 0 2vw; 
+}
+
+#emsg{
+	color: red;
+	display: none;
+	text-align: center;
+	width: 94%;
+	font-size: 1.3vw;
+	margin-top: 2vw;
+	font-family: Lobster;
 }
 <<<<<<< HEAD
 

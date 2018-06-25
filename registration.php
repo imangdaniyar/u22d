@@ -2,13 +2,12 @@
 	include 'header.php';
 ?>
 		<div class="grid-container">
-      <script src="js/jquery.js"></script>
   			<div class="content" style="background-color: rgb(4,197,130);
         box-shadow: 1vw 1vw 2vw rgb(4,195,130,0.3)!important;">
   				
             <div class="reg-form">
             <div class="contitle"><span class="contitle-name">Регистрация</span></div>
-              <form action="registration.php" method="POST" class="form" >               
+              <form action="registration.php" method="POST" class="form" onsubmit="return false" >               
                       <div class="input-field">
                         <input type="text" name="name" class="reg-inp" required id="form_name">
                         <label class="form-label">Введите ваше имя
@@ -73,8 +72,8 @@
                       <div class="input-field">
                         <select class="select-inp" style="font-size: 1vw; height: 3.4vw;" id="gender" required="true">
                           <option disabled selected value=""></option>
-                          <option value="M">Мужской</option>
-                          <option value="F">Женский</option>
+                          <option value="m">Мужской</option>
+                          <option value="f">Женский</option>
                         </select>
                         <label class="form-label">Выберете пол</label>
                         <div  class="tooltip_wrong">
@@ -85,12 +84,13 @@
                             <i style="color:lightgreen;font-size:2vw;" class="fa fa-check" aria-hidden="true" ></i>
                         </div>
                       </div>
+                      <div id="emsg">Заполните все поля верно</div>
                         
 
                       
                     
                       <div class="submit-form">
-                        <button type="" class="buton"  id="buton" onclick="button_sender();">Зарегистрироваться</button>
+                        <button type="" class="buton"  id="buton">Зарегистрироваться</button>
                           </div>
                       </div>
                     
