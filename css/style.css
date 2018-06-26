@@ -485,7 +485,6 @@ input[type=text]:focus,input[type=password]:focus + .hint-label{
 	margin-top: 2vw;
 	font-family: Lobster;
 }
-<<<<<<< HEAD
 
 
 
@@ -559,12 +558,25 @@ input[type=text]:focus,input[type=password]:focus + .hint-label{
 }
 
 
->>>>>>> fd44008821fcfa2439a0e354260934e51827cde3
-
 /*  ----------------ADITIONAL<<<<<<<<<<  */
-
+.section{
+	
+}
 .mini-profile{
-	width: 100%;
+	background-image: url(https://www.toptal.com/designers/subtlepatterns/patterns/shl.png);
+    width: 110%;
+    transition: 1s;
+    transform: rotateY(-20deg);
+    margin-top: 10%;
+    box-shadow: 1vw 1vw 3vw;
+    padding: 10% 0;
+    transform-style: preserve-3d;
+}
+.mini-profile:hover .mp-avatar{
+    transition: 2s;
+    transform: translateZ(10px) rotateY(-5deg) rotateZ(720deg);
+	box-shadow: 1vw 1vw 1vw;
+	cursor: pointer;
 }
 .mp-avatar{
 	width: 50%;
@@ -582,7 +594,7 @@ input[type=text]:focus,input[type=password]:focus + .hint-label{
 	margin:1vw auto;
 	display: flex;
 	justify-content: space-around;
-	color:lightgray;
+	color:#393C42;
 	font-size: 1.3vw;
 	font-weight: bold;
 }
@@ -596,9 +608,10 @@ input[type=text]:focus,input[type=password]:focus + .hint-label{
 	outline: none;
 	border:none;
 	color:gray;
-	background-color: #393C42;
+	background-image: url(https://www.toptal.com/designers/subtlepatterns/patterns/shl.png);
 	height: 2vw;
 
 }
+
 
 
