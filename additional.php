@@ -17,7 +17,13 @@
  				<?php echo $user->name.' '.$user->sname ?>
  			</div>
  			<div class="mp-status">
- 				<input type="textarea" name="status" placeholder="Нет статуса" rows="auto" id="status" dir="rtl" value="<?php echo $_SESSION['logged']->status ?>">
+ 				<div contenteditable="true" id="status" ><?php 
+ 				if($_SESSION['logged']->status != ''){
+ 					echo $_SESSION['logged']->status;	
+ 				} else echo 'Изменить статус';
+ 				
+
+ 				?></div>
  			</div>
  		</div>
  	</div>

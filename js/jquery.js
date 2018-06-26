@@ -221,7 +221,8 @@ function signin(){
 }
 
 function status_change(id){
-	var text = $('#status').val().trim();
+	
+	var text = $('#status').html().trim();
 	var str = 'id='+id+'&'+'status='+text;
 	$.ajax({
 				url: '/auth.php',
