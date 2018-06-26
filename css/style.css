@@ -139,6 +139,7 @@ a.nav-link{
 	padding-left: 1.5vw;
 	min-height:300px; 
 	text-decoration: none;
+	width: 87.4%;
 
 }
 
@@ -559,5 +560,41 @@ input[type=text]:focus,input[type=password]:focus + .hint-label{
 
 
 >>>>>>> fd44008821fcfa2439a0e354260934e51827cde3
+
+/*  ----------------ADITIONAL<<<<<<<<<<  */
+
+.mini-profile{
+	width: 100%;
+}
+.mp-avatar{
+	width: 50%;
+	margin:0 auto;
+	height: 10vw;
+	border-radius: 50%;
+	overflow: hidden;
+}
+.mp-ava{
+	width: 100%;
+	height: 100%;
+}
+.mp-info{
+	width: 80%;
+	margin:1vw auto;
+	display: flex;
+	justify-content: space-around;
+	color:lightgray;
+	font-size: 1.3vw;
+	font-weight: bold;
+}
+.mp-status{
+	margin:1vw auto;
+	width: 70%;	
+}
+#status{
+	background-color: #393C42;
+	outline: none;
+	border:none;
+	color:gray;	
+}
 
 

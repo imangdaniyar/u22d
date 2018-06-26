@@ -1,6 +1,6 @@
 <?php
-session_start();
 require 'rb.php';	
+session_start();
 R::setup( 'mysql:host=127.0.0.1;dbname=u2d','root', '' ); 
  
 if ( !R::testConnection() )
@@ -84,6 +84,7 @@ if ( !R::testConnection() )
 						<?php if( isset($_SESSION['logged']) ): ?>
 							<li class="nav-item" >
 								<a href="logout.php" class="nav-link">Выйти</a>
+								<input type="text" id="statusid" style="display:none ;" value="<?php echo $_SESSION['logged']->id ?>">
 						</li>
 						<?php else : ?>
 							<li class="nav-item" onclick="document.getElementById('id01').style.display='block'">
@@ -95,6 +96,6 @@ if ( !R::testConnection() )
 			</div>
 		</header>
 
-</html>			
+		
 	
 

@@ -41,6 +41,9 @@ $('document').ready(function(){
 	$("#signin-button").click(function() {
 		signin();
 	});
+	$("#status").focusout(function() {
+		status_change($('#statusid').val());
+	});
 
 
 
@@ -215,6 +218,20 @@ function signin(){
 	} else {
 		$('#error-messagebox').html('Заполните поля');
 	}
+}
+
+function status_change(id){
+	var text = $('#status').val().trim();
+	var str = 'id='+id+'&'+'status='+text;
+	$.ajax({
+				url: '/auth.php',
+        		type: "POST",
+        		cache: false,
+        		data: str,
+        		success: function(response) {
+        			var obj = $.parseJSON(response);
+        		}
+    		});
 }
 
 

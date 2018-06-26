@@ -28,12 +28,12 @@ exit('{ "ans": "http://u2d/main.php"}');
 }
 
 if ($_POST['signin']) {
-	$user = R::findOne('users' , 'login = ?', array($data['login']));
+	$usera = R::findOne('users' , 'login = ?', array($data['login']));
 
-	if ($user) {
+	if ($usera) {
 
-			if( password_verify($data['password'], $user->password)) {
-						$_SESSION['logged'] = $user;
+			if( password_verify($data['password'], $usera->password)) {
+						$_SESSION['logged'] = $usera;
 						exit('{ "ans": "http://u2d/main.php"}');
 							
 		}
@@ -42,6 +42,16 @@ if ($_POST['signin']) {
 			
 	} else { exit('{ "ans": "0" }'); }
 					
+}
+
+if ($_POST['id']) {
+	$text = $data['status'];
+	$users = R::load('users', $data['id']);
+	$users->status = $text;
+	R::store($users);
+	$_SESSION['logged']->status = $text;
+
+	exit ('{ "ans": "1"}');
 }
 
 
