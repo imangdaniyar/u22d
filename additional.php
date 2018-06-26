@@ -17,7 +17,7 @@
  				<?php echo $user->name.' '.$user->sname ?>
  			</div>
  			<div class="mp-status">
- 				<input type="textarea" name="status" id="status" dir="rtl" value="<?php echo $_SESSION['logged']->status ?>">
+ 				<input type="textarea" name="status" placeholder="Нет статуса" rows="auto" id="status" dir="rtl" value="<?php echo $_SESSION['logged']->status ?>">
  			</div>
  		</div>
  	</div>
