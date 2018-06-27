@@ -63,14 +63,14 @@ if ( !R::testConnection() )
 		<header class="header">
 			<div class="logo">
 				<img src="img/gray-bg.jpg" style="width: 100%; height: 100%;" />
-				<a href="main.php"><span class="logo-name">URALSK<br>TODAY</span></a>
+				<a href="main.php?pageNum=1"><span class="logo-name">URALSK<br>TODAY</span></a>
 			</div>
 			<div class="heads"><span id="main-note">Уральский новостной портал</span></div>
 			<div class="heads">
 				<div class="navbar">
 					<ul class="nav">
 						<li class="nav-item">
-							<a href="#" class="nav-link">Новости</a>
+							<a href="main.php?pageNum=1" class="nav-link">Новости</a>
 						</li>
 						<li class="nav-item">
 							<a href="#" class="nav-link">Объявления</a>

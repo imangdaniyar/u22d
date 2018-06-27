@@ -10,6 +10,9 @@ body{
 	height: 100%;
 	width: 100%;
 }
+hr{
+	width: 90%;
+}
 a.nav-link{
 	text-decoration:none;
 	color: lightgray;
@@ -21,7 +24,7 @@ a.nav-link{
 	margin:0 auto;
 	background-color: rgb(255,255,255,0.2);
 	margin-top:5%;
-	padding:7px;
+	padding:0.6vw;
 	
 }
 .header{
@@ -122,6 +125,7 @@ a.nav-link{
   	grid-gap: 0;
   	z-index: 2;
   	grid-row: 1/5;
+  	position: relative;
 
 }
 .content{
@@ -284,6 +288,20 @@ span.psw {
 
 }
 /*   NNENENWNENWENWENnewnns  */
+.pageControl{
+	width: 100%;
+	height: 1vw;
+	padding:0 2vw 2vw 0;
+	display: flex;
+	justify-content: space-around;
+	overflow: hidden;
+	
+}
+.pageControl a{
+	font-size:1vw;
+}
+
+
 .news{
 	height: 20vw;	
 	margin-bottom: 3vh;
@@ -320,15 +338,19 @@ span.psw {
 	margin-top: -3vw;
 	border-radius: 0 10px 10px 0;
 	float:left;
+	overflow: hidden;
+	height: 2.1vw;
 }
 .info{
 	font-family: Lobster, serif;
 	font-size: 1.5vw;
 	position: absolute;
-	top:40%;
+	top:45%;
 	padding-left: 4%;
 	padding-right: 4%;
 	transform: translateY(-30%);
+	height: 10vw;
+	overflow: hidden;
 }
 .readmore-container{
 	width: 92%;
@@ -339,6 +361,8 @@ span.psw {
 	bottom:0;
 	margin-left: 4%;
 	padding-left: 0;
+	display: inline-block;
+	overflow: hidden;
 }
 .readmore{
 	position: relative;
@@ -366,6 +390,33 @@ span.psw {
 	opacity: 0.5;
 
 }
+.comments{
+	color:gray;
+	font-size: 1vw;
+	list-style: none;
+	display: block;
+	position: relative;
+	min-width:28% ;
+	height: 100%;
+	float: left;
+}
+.avtor{
+	color:gray;
+	font-size: 1vw;
+	list-style: none;
+	display: block;
+	position: relative;
+	min-width:50%;
+	height: 100%;
+	float: left;
+}
+.center{
+	position: absolute;
+	top:50%;
+	left: 34%;
+	transform: translate(-50%,-50%);
+}
+
 
 .icon{
 	
@@ -575,12 +626,12 @@ input[type=text]:focus,input[type=password]:focus + .hint-label{
 }
 .mini-profile:hover{
 	transition: 0.7s;
-    transform: translateZ(5px) rotateY(5deg) rotateX(5deg);
+    transform: translateZ(5px) rotateY(-10deg) rotateX(5deg);
 	box-shadow: 1vw 1vw 1vw;
 }
 .mp-avatar:hover {
     transition: 2s;
-    transform: translateZ(10px) rotateY(0deg);
+    transform: translateZ(10px) rotateY(5deg);
 	box-shadow: 1vw 1vw 1vw;
 	cursor: pointer;
 }
@@ -640,13 +691,6 @@ input[type=text]:focus,input[type=password]:focus + .hint-label{
 	box-shadow: 1vw 1vw 1vw rgb(0,0,0,1);
 	cursor: pointer;
 
-}
-.zac{
-	position: absolute;
-	height: 5vw;
-	width: 6vw;
-	top:-3.8vw;
-	right: -2.3vw;
 }
 
 

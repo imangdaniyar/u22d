@@ -11,8 +11,7 @@
  	?>
  	<div class="section" style="perspective: 500px;">
  		<div class="mini-profile">
- 			<div class="zac">
- 			<img style="width: 100%; height: 100%;" src="img/zac.png" /></div>
+ 			
 	 		<div class="mp-avatar">
 	 			<img src="avatars/<?php echo $user->avatar?>" alt="avatar" class="mp-ava">
 	 		</div>
