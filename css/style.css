@@ -18,6 +18,11 @@ a.nav-link{
 	color: lightgray;
 
 }
+button{
+	outline: none;
+	border:none;
+	cursor: pointer;
+}
 .wrapper{
 	width: 80%;
 	height: 90% auto;

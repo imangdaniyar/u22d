@@ -1,8 +1,9 @@
 #block-for-slider {
-    width: 100%;
+    width: 96%;
     margin: 1vw auto;
     position: relative;
-    margin-bottom: 3vw;
+    margin-bottom: -1vw;
+    
 }
 
 #viewport {
@@ -43,3 +44,128 @@
 .slide-img {
     width: 100%;
 }
+.new-title{
+    width: 100%;
+    color:white;
+    background-color: #393C42;
+    margin: 0;
+    min-height: 4vw;
+    padding:1vw 0vw 0vw 1vw;
+   margin-left: -2vw;
+    overflow: hidden;
+    font-size: 2vw;
+    box-shadow: 1vw 1.5vw 1vw rgb(0,0,0,0.7);
+
+
+}
+.new-container{
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+.title-layout{
+    position: relative;
+    min-height: 6vw;
+    width: 100%;
+    margin-top: 2vw;
+
+
+}
+.additional-info{
+    font-size: 1vw;
+    color: gray;
+    float: right;
+}
+
+.new-text{
+    position: relative;
+    width: 96%;
+    padding: 2vw;
+    margin:0 auto;
+    font-size: 1.5vw;
+}
+.comment-container{
+    width: 89%;
+    margin:1vw auto;
+}
+.make-comment{
+  height: 8vw;
+  width: 100%;
+  margin-bottom: 1vw;  
+  margin-bottom: 1vw;
+  position: relative;
+ 
+}
+.comment-box{
+    width: 70%;
+    float: left;
+    border: 0.1vw solid #393c42;
+    color:black;
+    background-color: white;
+    min-height: 3vw;
+    border-radius: 1vw;
+    padding: 1vw;
+    height: auto;
+    outline: none;
+}
+.button-box-comments{
+    float: right;
+    width: 20%;
+    height: 3vw;
+
+}
+.com-buttons{
+    width: 100%;
+    height: 2.8vw;
+    font-size: 1vw;
+    margin-bottom:0.3vw;
+    border-radius: 0.6vw;
+    background-color: #4caf50;
+    border:none;
+    cursor: pointer;
+    outline: none;
+    color:white;
+    margin-top: 1vw;
+}
+.comment{
+    width: 100%;
+    margin:0.5vw auto;
+    min-height: 6vw;
+    height: auto;
+    position: relative;
+}
+.comments-ava{
+    width: 15%;
+    height: 6vw;
+    
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    margin-left: 1vw;
+}
+.com-ava{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.com-box{
+    width: 80%;
+  margin: 2vw 0vw 0vw 10vw;
+
+}
+.comment-text{
+    font-size: 1.5vw;
+}
+.clear{
+    clear:both;
+}
+.com-info{
+    float: right;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color:gray;
+    font-size: 1vw;
+}
+

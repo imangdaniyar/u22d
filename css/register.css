@@ -15,7 +15,7 @@
 }
 
 /* Set a style for all buttons */
-button {
+#signin-button {
     background-color: #4CAF50;
     color: white;
     padding: 14px 20px;
