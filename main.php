@@ -29,7 +29,7 @@
   						echo('<div class="news">
             		<div class="news-head">
               			<div class="news-img">
-                			<img src="img/header.jpg" alt=""> 
+                			<img src="img/header.jpg" alt="" class="title-image"> 
               			</div>
               			<div class="news-title">
                 			'.$new->title.'    
