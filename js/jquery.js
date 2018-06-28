@@ -238,7 +238,6 @@ function status_change(id){
 
 	
 
-});
 
 //New slideeeeeeeeeeeeeeeer
 var slideNow = 1;
@@ -314,3 +313,4 @@ function prevSlide() {
         slideNow--;
     }
 }
+});

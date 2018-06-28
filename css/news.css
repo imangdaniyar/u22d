@@ -13,7 +13,7 @@
 
 
 .news{
-	height: 20vw;	
+	height: 100%;	
 	margin-bottom: 3vh;
 	margin-top: 4vw;
 	width: 100%;
@@ -23,14 +23,14 @@
 }
 .news-head{
 	width: 100%;
-	position: absolute;
+	position: relative;
 	left: -3%;
 	height: 40%;
 	
 	
 }
 .news-img{
-	height:70%;
+	height: 6vw;
 	width: 100%;
 	overflow: hidden;
 	float: right;
@@ -54,8 +54,7 @@
 .info{
 	font-family: Lobster, serif;
 	font-size: 1.5vw;
-	position: absolute;
-	top:45%;
+	position: relative;
 	padding-left: 4%;
 	padding-right: 4%;
 	transform: translateY(-30%);
