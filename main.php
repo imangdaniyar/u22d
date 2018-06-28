@@ -16,7 +16,7 @@
 		}
 	
 	
-	$news  = R::findAll( 'news', ' id < :maxId AND id > :minId', array( 'maxId'=>$maxId, ':minId'=>$minId ) );
+	$news  = R::findAll( 'news', ' id < :maxId AND id > :minId ORDER BY id DESC' , array( 'maxId'=>$maxId, ':minId'=>$minId ) );
 	
 ?>
 		<div class="grid-container">
