@@ -5,6 +5,8 @@
     $temp_user = R::findOne( 'users', ' id = ? ', [ $new->uid ]);
             $tu_name = $temp_user->name;
             $tu_sname = $temp_user->sname;
+    $comments= R::find('comments', 'purpose = "n" AND pid=:pid ORDER BY date DESC', [':pid'=>$_GET['id']]);
+        
   }
 ?>
 		<div class="grid-container">
@@ -13,10 +15,10 @@
                     
                     <div class="title-layout">
                       <div class="new-title">
-                        Lorem ipssdfailhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh fdsaf asdf sadfhasi
+                        <?php echo($new->title); ?>
 
                       <div class="additional-info">
-                          Saginov Zhandos 10 101 01110 101
+                          <?php echo($tu_sname.' '.$tu_name.' '.$new->date); ?>
                       </div>   
                     </div>
                   </div>
@@ -42,60 +44,65 @@
                   </div>
 
               <div class="new-text">
-                <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem saepe architecto iusto consequuntur, amet beatae soluta expedita eum quas consequatur quos. Voluptas quia similique deserunt ipsam qui, odio alias, soluta!</div>
-                <div>Voluptatibus architecto unde voluptas doloribus ratione repellendus. Aliquid sint, modi molestias, voluptatem, facilis, maiores perspiciatis iusto itaque ducimus expedita maxime. Nam exercitationem minus dolore deserunt, asperiores autem! Eaque, nisi, molestias?</div>
-                <div>Hic inventore dolores quisquam, in facilis optio quidem consectetur cum odio consequuntur earum unde voluptate est quibusdam incidunt repellat quis aliquam totam. Possimus autem, totam veritatis distinctio doloremque adipisci architecto.</div>
+                <?php echo($new->text); ?>
               </div>
+              <hr>
                 
 
                   
                   </div>
                   <div class="comment-container">
+                    <?php if(isset($_SESSION['logged'])) :?>
+                     
                     <div class="make-comment">
                       <div class="button-box-comments">
                         <button class="com-buttons" type="file"><i dir="rtl" class="fa fa-paperclip"  aria-hidden="true"></i> Прикрепить</button>
-                        <button class="com-buttons" type="button"><i class="fa fa-share" aria-hidden="true"></i> Отправить</button>
+                        <button onclick="send_com(<?php  echo $_SESSION['logged']->id ?>, <?php  echo $_GET['id'] ?>) " class="com-buttons" type="button"><i class="fa fa-share" aria-hidden="true" "></i> Отправить</button>
                       </div>
                       <label style="font-size: 1.3vw; " for="comarea">Оставьте комментарий:</label>
-                      <div contenteditable="true" name="comarea" class="comment-box"></div>
+                      <div contenteditable="true" name="comarea" id="com_text" class="comment-box"></div>
                     </div>
+                    <?php else : ?>
+                      <div class="a2mk">Зарегистрируйтесь что бы оставлять комментарии!</div>
+                    <?php endif ?>
                     <br>
-                    <br>
+                    <hr>
+                    <br class="kek">
+                    <?php foreach ($comments as $comment) {
+                    $com_user = R::findOne('users', ' id = ? ', [ $comment->uid ]);
+                    if($com_user->id == $_SESSION['logged']->id){
+                      $delete = '<div class="delete-com"  onclick="delete_com('.$comment->id.')">Удалить</div>';
+                    }else $delete = '';
                     
-                    <div class="comment">
+                    echo('<div class="comment" id="'.$comment->id.'">
                       <div class="comments-ava">
-                        <img src="avatars/default_avatar.jpg" alt="ava" class="com-ava">
+                        <img src="avatars/'.$com_user->avatar.'" alt="ava" class="com-ava">
+
                       </div>
-                      <div class="com-box">
+                      <div class="com-box" >
                         <div class="comment-text">
-                          <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus asperiores provident ut in sequi, corporis magni facere totam ex earum, ea quod reiciendis laborum sunt. Fugit, distinctio quaerat quis ea.</div>
+                          <div class="com_user_info"><a href="profile.php?id='.$com_user->id.'">'.$com_user->sname.' '.$com_user->name.':</a></div>
+                          '.$delete.'
+                          <div>'.$comment->text.'</div>
                          
                         </div>
                         <br class="clear">
                         <div class="com-info">
-                        fsdfsdfsdfds
+                        '.$comment->date.'
                         </div>
                       </div>
-                    </div>
+
+                    </div>'
+                  );
+                    
+                    } ?>
+                    
+                    
                      
-                    <hr>
-                    <div class="comment">
-                      <div class="comments-ava">
-                        <img src="avatars/default_avatar.jpg" alt="ava" class="com-ava">
-                      </div>
-                      <div class="com-box">
-                        <div class="comment-text">
-                          <div>Lorem ipsum dolor sit amet.</div>
-                         
-                        </div>
-                        <br class="clear">
-                        <div class="com-info">
-                        fsdfsdfsdfds
-                        </div>
-                      </div>
-                    </div>
                     
-                    <hr>
+                   
+                    
+                    
 
                   </div>
                   

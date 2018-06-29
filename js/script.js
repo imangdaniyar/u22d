@@ -21,3 +21,37 @@ function photos(){
 	$('#profile-tab2').addClass('active');
 	$('#profile-tab1').removeClass('active');
 }
+function delete_com(id) {
+	var str = 'delete_com=1&'+'id='+id;
+	
+	$.ajax({
+				url: '/brain.php',
+        		type: "POST",
+        		cache: false,
+        		data: str,
+        		success: function(response) {
+        			var obj = $.parseJSON(response);
+        			$('#'+id).fadeOut("slow");
+
+        		}
+    		});
+}
+
+function send_com(uid,pid){
+	
+	var text = $('#com_text').html().trim();
+	var str = 'add_com=1&'+'text='+text+'&pid='+pid+'&uid='+uid;
+	if(text){
+		$.ajax({
+				url: '/brain.php',
+        		type: "POST",
+        		cache: false,
+        		data: str,
+        		success: function(response) {
+        			$('#com_text').html('');
+        			$('.kek').after(response);
+        		}
+    		});
+	}
+	
+}

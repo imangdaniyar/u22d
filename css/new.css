@@ -113,6 +113,8 @@
     padding: 1vw;
     height: auto;
     outline: none;
+    font-size: 1.3vw;
+    font-family: 'Cormorant Unicase', serif;
 }
 .button-box-comments{
     position: absolute;
@@ -142,13 +144,15 @@
     min-height: 6vw;
     height: auto;
     position: relative;
+    padding: 0.5vw;
+    border-bottom: 0.1vw solid silver
 }
 .comments-ava{
     width: 15%;
     height: 6vw;
     
     position: absolute;
-    top:50%;
+    top:40%;
     transform: translateY(-50%);
     margin-left: 1vw;
 }
@@ -165,6 +169,7 @@
 }
 .comment-text{
     font-size: 1.5vw;
+    word-wrap: break-word;
 }
 
 .com-info{
@@ -175,4 +180,30 @@
     color:gray;
     font-size: 1vw;
 }
+.com_user_info{
+    position: absolute;
+    top:0vw;
+    font-size:1.3vw;
+    color:blue;
+    cursor: pointer;
+}
+.delete-com{
+    position: absolute;
+    right: 0;
+    top: 0vw;
+    font-size: 1vw;
+    padding: 0.3vw 1vw 0.3vw 1vw;
+    background-color:#393c42;
+    border-radius: 1vw;
+    color:gray;
 
+}
+.delete-com:hover{
+    cursor: pointer;
+    opacity: 0.9;
+    color: white;
+}
+.a2mk{
+    font-size: 2vw;
+  ]
+}
