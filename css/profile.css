@@ -1,7 +1,6 @@
 .profile-container{
 	width: 100%;
 	height: 100%;
-	border: 1px solid black;
 }
 .profile-head{
 	width: 100%;
@@ -15,21 +14,25 @@
 	float: left;
 	background-color: gray;
 	border-radius: 50%;
-	border:2px solid white;
+	border:0.1vw solid white;
 	box-shadow: 0 0 1vw gray;
 	position: relative;
 	z-index: 2;
 }
-.ava{
+.profile-ava:hover{
+	opacity: 0.5;
+	cursor: pointer;
+}
+.profile-ava{
 	height: 100%;
-	width: 100%;	
+	width: 100%;
+	border-radius: 50%;	
 }
 .profile-info{
-	width: 80%;
+	width: 70%;
 	height: 100%;
 	position: relative;
-	left: 20%;
-	text-align: left;	
+	float: left;
 }
 .profile-content{
 	position: relative;
@@ -92,15 +95,17 @@ hr{
 }
 .personal-info{
 	margin: 1vw 2vw;	
-	height: 100%;
-	position: absolute;
-	width: 100%;
+	height: auto;
+	position: relative;
+	width: 94%;
+	font-size: 1.5vw;
 }
 .about{
-	display: none;
+	display: block;
 }
 .photos{
-	overflow: hidden;
+	width: 92%;
+	display: none;
 }
 .photo{
 	height: 100%;
@@ -109,12 +114,22 @@ hr{
 .photo-container{
 	height: 10vw;
 	width: 10vw;
-	float: left;
-	padding: 1vw;
+	padding: 0.5vw;
+	background-color: #fff;
+	border: 1px solid silver;
+	margin: 0.2vw;
+	
 }
 .photos_container{
-	width: auto;
-	height: 100%;
-	overflow-x: scroll;
+	width: 100%;
+	height: 13vw;
+	display: flex;
+	justify-content: space-around;
 }
+.clearfix{
+    clear:both;
+    content: '';
+    display: table;
+}
+
 

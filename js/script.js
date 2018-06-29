@@ -8,3 +8,16 @@ window.onclick = function(event) {
     }
 }
 
+function aboutme(){
+	$('.about').css('display','block');
+	$('.photos').css('display','none');
+	$('#profile-tab1').addClass('active');
+	$('#profile-tab2').removeClass('active');
+
+}
+function photos(){
+	$('.about').css('display','none');
+	$('.photos').css('display','block');
+	$('#profile-tab2').addClass('active');
+	$('#profile-tab1').removeClass('active');
+}
