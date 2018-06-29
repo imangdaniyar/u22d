@@ -6,8 +6,6 @@
  		$usera = R::findOne('users' , 'id = ?', array($user->id));
  		$_SESSION['logged'] = $usera;
  		$user = $_SESSION['logged'];
- 		
- 		
  	?>
  	<div class="section" style="perspective: 500px;">
  		<div class="mini-profile">

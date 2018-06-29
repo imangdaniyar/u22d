@@ -314,3 +314,8 @@ function prevSlide() {
     }
 }
 });
+$(document).ready(function() {
+	$(".about").hide();
+	$(".photo").hide();
+	
+});
