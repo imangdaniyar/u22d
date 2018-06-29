@@ -78,15 +78,26 @@
 }
 .active{
 	color: black;
-	border-bottom: solid 2px red;
+	border-bottom: solid 2px gray;
 }
 hr{
 	margin: 0 2vw;
 }
-.name{
+.short-info{
 	text-align: left;
-	width: 100%;
-	height: 100%;
+	width: auto;
+	height: auto;
+	color: #313839;
+	position: relative;
+}
+.name{
+		margin-top: 2vw;
+	font-size: 2vw;
+}
+.add-info{
+		margin-top: 0.8vw;
+	font-size: 1.5vw;
+
 }
 .personal{
 	width: 100%;
@@ -136,5 +147,21 @@ hr{
     content: '';
     display: table;
 }
+.dob{
+	position: absolute;
+	width: 8vw;
+	height: auto;
+	text-align: center;
+	right: 0;
+	top: 0;
+}
+.day{
+	font-size: 3.5vw;
+}
+.month{
+	font-family:  'Cinzel Decorative', cursive;
+}
+.year{
 
+}
 

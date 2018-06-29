@@ -11,7 +11,19 @@
                 <img src="avatars/default_avatar.jpg" alt="" class="profile-ava">
               </div>
               <div class="profile-info">
-                <div class="name"></div>
+                <div class="short-info">
+                  <div class="name">
+                     Daniyar Imangaliyev
+                  </div>
+                  <div class="add-info">
+                      18 Uralsk
+                  </div>   
+                  <div class="dob">
+                    <div class="day">26</div>
+                    <div class="month"><b>September</b></div>
+                    <div class="year">2000</div>
+                  </div>
+                </div>
               </div>
             </div>
 
