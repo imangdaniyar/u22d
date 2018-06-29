@@ -89,12 +89,18 @@
     margin:1vw auto;
 }
 .make-comment{
-  height: 8vw;
+  min-height: 8vw;
   width: 100%;
   margin-bottom: 1vw;  
   margin-bottom: 1vw;
   position: relative;
+  height: auto;
  
+}
+.make-comment:after{
+    clear: both;
+    content: '';
+    display: table;
 }
 .comment-box{
     width: 70%;
@@ -109,9 +115,12 @@
     outline: none;
 }
 .button-box-comments{
-    float: right;
+    position: absolute;
     width: 20%;
     height: 3vw;
+    bottom: 5vw;
+    right: 0;
+
 
 }
 .com-buttons{
