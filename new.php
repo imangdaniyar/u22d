@@ -6,11 +6,13 @@
             $tu_name = $temp_user->name;
             $tu_sname = $temp_user->sname;
     $comments= R::find('comments', 'purpose = "n" AND pid=:pid ORDER BY date DESC', [':pid'=>$_GET['id']]);
+
         
   }
 ?>
 		<div class="grid-container">
   			<div class="content">
+          <script src="js/upload.js"></script>
   				<div class="new-container">
                     
                     <div class="title-layout">
@@ -56,11 +58,19 @@
                      
                     <div class="make-comment">
                       <div class="button-box-comments">
-                        <button class="com-buttons" type="file"><i dir="rtl" class="fa fa-paperclip"  aria-hidden="true"></i> Прикрепить</button>
-                        <button onclick="send_com(<?php  echo $_SESSION['logged']->id ?>, <?php  echo $_GET['id'] ?>) " class="com-buttons" type="button"><i class="fa fa-share" aria-hidden="true" "></i> Отправить</button>
+                        <form action="images.php" method="POST"  onsubmit="return false" style="display:none;" enctype="multipart/form-data" id="form">
+                            <input type="file" id="f_dialog" name="f_dialog"  multiple="true" onchange="render(this.files)"/>
+                            <input onclick="upload(<?php  echo $_SESSION['logged']->id ?>, <?php  echo $_GET['id'] ?>)" type="submit" id="submit" name="submit" value="q" />
+                        </form>
+                        <button onclick="$('#f_dialog').trigger('click');" class="com-buttons" type="file"><i dir="rtl" class="fa fa-paperclip"  aria-hidden="true"></i> Прикрепить</button>
+                        <button onclick="send_com(<?php  echo $_SESSION['logged']->id ?>, <?php  echo $_GET['id'] ?>);$('#submit').trigger('click'); " class="com-buttons" type="button"><i class="fa fa-share" aria-hidden="true" "></i> Отправить</button>
                       </div>
                       <label style="font-size: 1.3vw; " for="comarea">Оставьте комментарий:</label>
                       <div contenteditable="true" name="comarea" id="com_text" class="comment-box"></div>
+                      <div class="img-container">
+                        
+                        </div>
+                      
                     </div>
                     <?php else : ?>
                       <div class="a2mk">Зарегистрируйтесь что бы оставлять комментарии!</div>
@@ -70,9 +80,22 @@
                     <br class="kek">
                     <?php foreach ($comments as $comment) {
                     $com_user = R::findOne('users', ' id = ? ', [ $comment->uid ]);
+                    $com_images = R::find('comimages', 'cid = ?', [$comment->id]);
+                    if($com_images){
+                      foreach ($com_images as $image) {
+                        $images = $images.'
+                          <div class="com_image">
+                            <img class="com_photo"  src="com_images/'.$image->image.'"/>
+                          </div>
+                        ';
+                      }
+                        $images = '<div class="com_images">'.$images.'</div>';
+                      }else $images = '';
+                    
                     if($com_user->id == $_SESSION['logged']->id){
                       $delete = '<div class="delete-com"  onclick="delete_com('.$comment->id.')">Удалить</div>';
                     }else $delete = '';
+
                     
                     echo('<div class="comment" id="'.$comment->id.'">
                       <div class="comments-ava">
@@ -83,7 +106,7 @@
                         <div class="comment-text">
                           <div class="com_user_info"><a href="profile.php?id='.$com_user->id.'">'.$com_user->sname.' '.$com_user->name.':</a></div>
                           '.$delete.'
-                          <div>'.$comment->text.'</div>
+                          <div>'.$comment->text.'</div>'.$images.'
                          
                         </div>
                         <br class="clear">
@@ -94,8 +117,10 @@
 
                     </div>'
                   );
+                    $images = '';
                     
                     } ?>
+                    
                     
                     
                      

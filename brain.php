@@ -10,8 +10,18 @@ if ( !R::testConnection() )
 	$data = $_POST;
 if($_POST['delete_com']){
 	$id = $data['id'];
+	$images = R::find('comimages', 'cid = ?',[$id]);
+	foreach ($images as $image) {
+		$img = $image->image;
+		$upload_path = __DIR__."/com_images/";
+		$server_filepath = $upload_path.$img;
+		unlink($server_filepath);
+	}
+	R::trashAll($images);
+
 	$comment = R::load('comments',$id);
 	R::trash($comment);
+
 	exit('{ "ans": "1"}');
 }
 
@@ -27,6 +37,12 @@ if($_POST['add_com']){
 
 	$comment->purpose = "n";
 	R::store($comment);
-	exit('<div class="comment" id="'.$comment->id.'"><div class="comments-ava"><img src="avatars/'.$com_user->avatar.'" alt="ava" class="com-ava"></div><div class="com-box" ><div class="comment-text"><div class="com_user_info"><a href="profile.php?id='.$com_user->id.'">'.$com_user->sname.' '.$com_user->name.':</a></div><div class="delete-com"  onclick="delete_com('.$comment->id.')">Удалить</div><div>'.$comment->text.'</div></div><br class="clear"><div class="com-info">Сейчас</div></div></div>');
-}
+	$_SESSION['com_id'] = R::getInsertID();
+	
+		exit('<div class="comment" id="'.$comment->id.'"><div class="comments-ava"><img src="avatars/'.$com_user->avatar.'" alt="ava" class="com-ava"></div><div class="com-box" ><div class="comment-text"><div class="com_user_info"><a href="profile.php?id='.$com_user->id.'">'.$com_user->sname.' '.$com_user->name.':</a></div><div class="delete-com"  onclick="delete_com('.$comment->id.')">Удалить</div><div>'.$comment->text.'</div></div><br class="clear"><div class="com-info">Сейчас</div></div></div>');
+	
+	}
+
+	
+
 }

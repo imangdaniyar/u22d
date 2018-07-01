@@ -32,6 +32,7 @@ if ( !R::testConnection() )
 </head>
 <body>
 	<script src="js/jquery.js"></script>
+	
 	<div id="id01" class="modal">
   
   <form class="modal-content animate" action="/action_page.php" onsubmit="return false">

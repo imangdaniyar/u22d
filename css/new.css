@@ -205,5 +205,46 @@
 }
 .a2mk{
     font-size: 2vw;
-  ]
+  
+}
+
+.com_images{
+    width: 100%;
+    min-height: 10vw;
+     clear: both;
+    content: '';
+    display: table;
+}
+.com_image{
+    width: 26%;
+    height: 8vw;
+    padding: 0.5vw;
+    background-color: white;
+    border:0.1vw solid silver;
+    float: left;
+    margin:0.3vw;
+
+}
+.com_photo{
+    width: 100%;
+    height: 100%;
+}
+.img-container{
+    width: 70%;
+    float: left;
+    border: 0.1vw solid #393c42;
+    color:black;
+    background-color: white;
+    min-height: 3vw;
+    border-radius: 1vw;
+    padding: 1vw;
+    height: auto;
+    display: none;
+
+    
+}
+.img-container:after{
+    clear: both;
+    content: '';
+    display: table;
 }
