@@ -1,8 +1,16 @@
 <?php 
 	include 'header.php';
-
 ?>
+<?php if(isset($_SESSION['logged'])) :?>
+<?php $user = $_SESSION['logged'];
+    $usera = R::findOne('users' , 'id = ?', array($user->id));
+    $_SESSION['logged'] = $usera;
+    $user = $_SESSION['logged'];?>
+<?php endif; ?>
+
+
 		<div class="grid-container">
+ 
   			<div class="content">
 
   				<div class="profile-container">
@@ -13,10 +21,15 @@
               <div class="profile-info">
                 <div class="short-info">
                   <div class="name">
-                     Daniyar Imangaliyev
+                     <?php echo $user->name.' '.$user->sname ?>
                   </div>
                   <div class="add-info">
-                      18 Uralsk
+                      Gender: <?php 
+                      if ($user->gender == "m") :?>
+                        Male
+                      <?php elseif ($user->gender == "f") :?>
+                        Female
+                      <?php endif; ?>
                   </div>   
                   <div class="dob">
                     <div class="day">26</div>
@@ -64,7 +77,6 @@
             </div>
           </div>
         </div>
-  					
   			<?php 
   include 'additional.php';
 ?>

@@ -24,6 +24,7 @@ if ( !R::testConnection() )
 	<link rel="stylesheet" href="css/register.css"  type="text/css">
 	<link rel="stylesheet" href="css/miniprofile.css" type="text/css">
 	<link rel="stylesheet" href="css/new.css" type="text/css">
+	<link rel="stylesheet" href="css/ads.css"  type="text/css">
 	
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative|Cormorant+Unicase|EB+Garamond|Lobster" rel="stylesheet">
@@ -53,7 +54,7 @@ if ( !R::testConnection() )
      	<div id="error-messagebox"></div>
      	 
       <button type="" class="buton" id="signin-button" style="margin-top:1vw;">Войти</button>
-      <span style="float:right;">Нет аккаунта?, <a href="registration.php" style="color:blue">зарегистрируйтесь</a></span>
+      <span style="float:right; color: white;">Нет аккаунта?, <a href="registration.php" style="color:white;">зарегистрируйтесь</a></span>
     </div>
   
     	  
@@ -76,7 +77,7 @@ if ( !R::testConnection() )
 							<a href="main.php?pageNum=1" class="nav-link">Новости</a>
 						</li>
 						<li class="nav-item">
-							<a href="#" class="nav-link">Объявления</a>
+							<a href="ads.php" class="nav-link">Объявления</a>
 						</li>
 						<li class="nav-item">
 							<a href="#" class="nav-link">Статьи</a>
