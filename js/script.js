@@ -40,7 +40,11 @@ function delete_com(id) {
 function send_com(uid,pid){
 	
 	var text = $('#com_text').html().trim();
-	var str = 'add_com=1&'+'text='+text+'&pid='+pid+'&uid='+uid;
+	if(!text){
+		$('#com_text').css("border","0.1vw solid red");
+	} else{
+		$('#com_text').css("border","0.1vw solid black");
+		var str = 'add_com=1&'+'text='+text+'&pid='+pid+'&uid='+uid;
 	if(text){
 		$.ajax({
 				url: '/brain.php',
@@ -51,10 +55,12 @@ function send_com(uid,pid){
         			$('#com_text').html('');
         			$('.img-container').html('');
         			$('.img-container').css('display','none');
-        			
+
         			$('.kek').after(response);
         		}
     		});
 	}
+	}
+	
 	
 }
