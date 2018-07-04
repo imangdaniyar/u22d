@@ -26,6 +26,8 @@
   					$temp_user = R::findOne( 'users', ' id = ? ', [ $new->uid ]);
   					$tu_name = $temp_user->name;
   					$tu_sname = $temp_user->sname;
+  					$com_num = R::count('comments','pid = ?',[$new->id]);
+  				
   						echo('<div class="news">
             		<div class="news-head">
               			<div class="news-img">
@@ -37,7 +39,7 @@
             		</div>
   					<div class="info">'.$new->text.'</div>
             		<div class="readmore-container">
-            	<div class="comments"><span style="left: 50%;" class="center">0 Комментариев</span></div>
+            	<div class="comments"><span style="left: 50%;" class="center">'.$com_num.' Комментариев</span></div>
             	<div class="avtor"><span class="center">'.$tu_sname.' '.$tu_name.' '.$new->date.'</span></div>
                   <div class="readmore">
                     <a href="new.php?id='.$new->id.'" class="readmore-link">

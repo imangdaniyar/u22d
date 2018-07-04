@@ -32,6 +32,12 @@ $cid = $_SESSION['com_id'];
 				$image->uid = $uid;
 				$image->image = $server_filename;
 				R::store($image);
+				$temp = $temp.'
+                          <div class="com_image">
+                            <img class="com_photo"  src="com_images/'.$server_filename.'"/>
+                          </div>
+                        ';
+
 
 				
 	
@@ -40,6 +46,8 @@ $cid = $_SESSION['com_id'];
  		
  	}
  	$_FILES='';
+ 	 $temp = '<div class="com_images">'.$temp.'</div>';
+ 	 exit($temp);
  }
 }
   ?>

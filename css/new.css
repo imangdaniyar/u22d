@@ -109,7 +109,6 @@
     color:black;
     background-color: white;
     min-height: 3vw;
-    border-radius: 1vw;
     padding: 1vw;
     height: auto;
     outline: none;
@@ -131,11 +130,11 @@
     font-size: 1vw;
     margin-bottom:0.3vw;
     border-radius: 0.6vw;
-    background-color: #4caf50;
+    background-color: yellow;
     border:none;
     cursor: pointer;
     outline: none;
-    color:white;
+    color:#393c42;
     margin-top: 1vw;
 }
 .comment{
@@ -146,16 +145,15 @@
     position: relative;
     padding: 0.5vw;
     border-bottom: 0.1vw solid silver;
-    background-color:lightgray;
-    box-shadow: 1vw 1vw 1vw rgb(0,0,0,0.5);
+    border-radius:0 1vw 0 0;
 }
 .comments-ava{
     width: 15%;
     height: 6vw;
     
     position: absolute;
-    top:40%;
-    transform: translateY(-50%);
+    top:1%;
+    
     margin-left: 1vw;
 }
 .com-ava{
@@ -192,17 +190,18 @@
 .delete-com{
     position: absolute;
     right: 0;
-    top: 0vw;
+    top: 0;
     font-size: 1vw;
     padding: 0.3vw 1vw 0.3vw 1vw;
     background-color:#393c42;
     border-radius: 1vw;
-    color:gray;
+    color:lightgray;
+
 
 }
 .delete-com:hover{
     cursor: pointer;
-    opacity: 0.9;
+    opacity: 0.5;
     color: white;
 }
 .a2mk{
@@ -225,6 +224,7 @@
     border:0.1vw solid silver;
     float: left;
     margin:0.3vw;
+    position: relative;
 
 }
 .com_photo{
@@ -238,7 +238,7 @@
     color:black;
     background-color: white;
     min-height: 3vw;
-    border-radius: 1vw;
+    border-radius: 0vw;
     padding: 1vw;
     height: auto;
     display: none;
@@ -249,4 +249,16 @@
     clear: both;
     content: '';
     display: table;
+}
+#tempdiv{
+    display: none;
+}
+.point{
+    display: none;
+}
+.remove-image{
+    position: absolute;
+    top: -0.3vw;
+    right: 0vw;
+    cursor: pointer;
 }

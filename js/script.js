@@ -55,8 +55,9 @@ function send_com(uid,pid){
         			$('#com_text').html('');
         			$('.img-container').html('');
         			$('.img-container').css('display','none');
-
-        			$('.kek').after(response);
+        			$('#tempdiv').html(response);
+        			$('#submit').trigger('click');
+        			
         		}
     		});
 	}

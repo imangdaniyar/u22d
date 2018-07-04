@@ -60,10 +60,10 @@
                       <div class="button-box-comments">
                         <form action="images.php" method="POST"  onsubmit="return false" style="display:none;" enctype="multipart/form-data" id="form">
                             <input type="file" id="f_dialog" name="f_dialog"  multiple="true" onchange="render(this.files)"/>
-                            <input onclick="upload(<?php  echo $_SESSION['logged']->id ?>, <?php  echo $_GET['id'] ?>)" type="submit" id="submit" name="submit" value="q" />
+                            <input onclick="upload(<?php  echo $_SESSION['logged']->id ?>,$('#tempdiv').html())" type="submit" id="submit" name="submit" value="q" />
                         </form>
                         <button onclick="$('#f_dialog').trigger('click');" class="com-buttons" type="file"><i dir="rtl" class="fa fa-paperclip"  aria-hidden="true"></i> Прикрепить</button>
-                        <button onclick="send_com(<?php  echo $_SESSION['logged']->id ?>, <?php  echo $_GET['id'] ?>);$('#submit').trigger('click'); " class="com-buttons" type="button"><i class="fa fa-share" aria-hidden="true" "></i> Отправить</button>
+                        <button onclick="send_com(<?php  echo $_SESSION['logged']->id ?>, <?php  echo $_GET['id'] ?>); " class="com-buttons" type="button"><i class="fa fa-share" aria-hidden="true" "></i> Отправить</button>
                       </div>
                       <label style="font-size: 1.3vw; " for="comarea">Оставьте комментарий:</label>
                       <div contenteditable="true" name="comarea" id="com_text" class="comment-box"></div>
@@ -136,6 +136,7 @@
   			<?php 
          include 'additional.php';
         ?>
+        <div id="tempdiv"></div>
         
 		</div>
     </div>    	

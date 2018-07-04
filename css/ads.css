@@ -1,6 +1,7 @@
 .ads{
-	height: auto;
-	width: auto;
+	height: 100%;
+	width: 100%;
+	background-color: black;
 }
 .ad{
 	display: flex;
